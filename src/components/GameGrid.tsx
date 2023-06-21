@@ -6,7 +6,7 @@ import GameCardContainer from "./GameCardContainer";
 import { Genre } from "../hooks/useGenres";
 
 interface Props {
-  selectedGenre: Genre;
+  selectedGenre: Genre | null;
 }
 
 const GameGrid = ({ selectedGenre }: Props) => {

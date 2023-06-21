@@ -5,9 +5,10 @@ import cropURL from "../services/image-url";
 
 interface Props {
   setGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-const GenreList = ({ setGenre }: Props) => {
+const GenreList = ({ setGenre, selectedGenre }: Props) => {
   const { data, error, loading } = useGenres();
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
@@ -25,7 +26,12 @@ const GenreList = ({ setGenre }: Props) => {
         <ListItem key={genre.id} paddingBottom="10px">
           <HStack>
             <Image boxSize="36px" src={cropURL(genre.image_background)} borderRadius={6} />
-            <Button fontSize="lg" variant="link" onClick={() => setGenre(genre)}>
+            <Button
+              fontSize="lg"
+              variant="link"
+              onClick={() => setGenre(genre)}
+              fontWeight={genre.id === selectedGenre?.id ? "bold" : "light"}
+            >
               {genre.name.split(" ")[genre.name.split(" ").length - 1]}
             </Button>
           </HStack>
