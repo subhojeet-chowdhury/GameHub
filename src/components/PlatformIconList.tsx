@@ -4,7 +4,7 @@ import { BsGlobe } from "react-icons/bs";
 import { MdPhoneIphone } from "react-icons/md";
 import { IconType } from "react-icons/lib/esm/iconBase";
 import { HStack, Icon } from "@chakra-ui/react";
-import { Platform } from "../hooks/useGames.ts";
+import { Platform } from "../hooks/usePlatforms.ts";
 
 interface Props {
   platforms: Platform[];
