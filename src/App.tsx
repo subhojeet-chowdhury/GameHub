@@ -31,14 +31,14 @@ function App() {
         <NavBar />
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" paddingX={5} paddingY={10}>
+        <GridItem area="aside" paddingX={5} paddingY={5}>
           <GenreList
             setGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
             selectedGenre={gameQuery.genre}
           />
         </GridItem>
       </Show>
-      <GridItem area="main" padding={10}>
+      <GridItem area="main" padding={5}>
         <HStack spacing={3}>
           <PlatfromSelector
             setPlatform={(platform) => setGameQuery({ ...gameQuery, platform })}
