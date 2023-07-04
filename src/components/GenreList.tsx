@@ -1,4 +1,4 @@
-import { List, ListItem, HStack, Image, Button } from "@chakra-ui/react";
+import { List, ListItem, HStack, Image, Button, Heading } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
 import GenreSkeleton from "./GenreSkeleton";
 import cropURL from "../services/image-url";
@@ -15,29 +15,39 @@ const GenreList = ({ setGenre, selectedGenre }: Props) => {
   if (error) return null;
 
   return (
-    <List>
-      {loading &&
-        skeletons.map((skeleton) => (
-          <ListItem key={skeleton} paddingBottom="10px">
-            <GenreSkeleton />
+    <>
+      <Heading fontSize="2xl" marginBottom={3}>
+        Genres
+      </Heading>
+      <List>
+        {loading &&
+          skeletons.map((skeleton) => (
+            <ListItem key={skeleton} paddingBottom="10px">
+              <GenreSkeleton />
+            </ListItem>
+          ))}
+        {data.map((genre: Genre) => (
+          <ListItem key={genre.id} paddingBottom="10px">
+            <HStack>
+              <Image
+                boxSize="36px"
+                src={cropURL(genre.image_background)}
+                borderRadius={6}
+                objectFit="cover"
+              />
+              <Button
+                fontSize="lg"
+                variant="link"
+                onClick={() => setGenre(genre)}
+                fontWeight={genre.id === selectedGenre?.id ? "bold" : "light"}
+              >
+                {genre.name.split(" ")[genre.name.split(" ").length - 1]}
+              </Button>
+            </HStack>
           </ListItem>
         ))}
-      {data.map((genre) => (
-        <ListItem key={genre.id} paddingBottom="10px">
-          <HStack>
-            <Image boxSize="36px" src={cropURL(genre.image_background)} borderRadius={6} />
-            <Button
-              fontSize="lg"
-              variant="link"
-              onClick={() => setGenre(genre)}
-              fontWeight={genre.id === selectedGenre?.id ? "bold" : "light"}
-            >
-              {genre.name.split(" ")[genre.name.split(" ").length - 1]}
-            </Button>
-          </HStack>
-        </ListItem>
-      ))}
-    </List>
+      </List>
+    </>
   );
 };
 
