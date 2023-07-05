@@ -21,6 +21,11 @@ Chakra UI: A beautiful and customizable UI component library for React.
 RAWG API: The official RAWG API to fetch game data and enrich the gaming experience.
 Axios: A popular HTTP client for making API requests.
 React Router: A routing library for handling client-side navigation.
+
+Deployment
+
+Deployed on vercel : https://gamehubbb.vercel.app/
+
 Installation
 
 Clone the repository: git clone https://github.com/subhojeet-chowdhury/GameHub.git
