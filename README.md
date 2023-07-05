@@ -22,13 +22,13 @@ Axios: A popular HTTP client for making API requests.
 React Router: A routing library for handling client-side navigation.
 Installation
 
-Clone the repository: git clone https://github.com/your-username/rawg-games-clone.git
-Navigate to the project directory: cd rawg-games-clone
+Clone the repository: git clone https://github.com/subhojeet-chowdhury/GameHub.git
+Navigate to the project directory: cd GameHub
 Install dependencies: npm install
-Start the development server: npm start
+Start the development server: npm run start
 
 Contributing
-We welcome and encourage contributions from the community! Whether you want to fix a bug, improve the user interface, or add exciting new features, your input is invaluable. To contribute, please follow our contribution guidelines.
+We welcome and encourage contributions from the community! Whether you want to fix a bug, improve the user interface, or add exciting new features, your input is valuable. To contribute, please follow our contribution guidelines.
 
 Acknowledgments
 We extend our heartfelt gratitude to the team behind RAWG for providing the incredible RAWG API, which powers this project and empowers gamers worldwide. Additionally, we thank the open-source community for inspiring us to create something meaningful and share it with the world.
