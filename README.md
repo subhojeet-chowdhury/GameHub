@@ -16,6 +16,7 @@ Responsive Design: Whether you're exploring on a desktop, laptop, tablet, or sma
 
 Tech Stack
 React.js: Front-end framework for building dynamic user interfaces.
+TypeScript: A superset of JavaScript that adds static typing for enhanced developer productivity and code quality.
 Chakra UI: A beautiful and customizable UI component library for React.
 RAWG API: The official RAWG API to fetch game data and enrich the gaming experience.
 Axios: A popular HTTP client for making API requests.
