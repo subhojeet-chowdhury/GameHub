@@ -19,7 +19,7 @@ const GenreList = ({ setGenre, selectedGenre }: Props) => {
       <Heading fontSize="2xl" marginBottom={3}>
         Genres
       </Heading>
-      <List>
+      <List overflow="auto" maxHeight="80vh" scrollBehavior="smooth">
         {loading &&
           skeletons.map((skeleton) => (
             <ListItem key={skeleton} paddingBottom="10px">
